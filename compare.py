@@ -3,6 +3,7 @@
 
 import difflib
 import re
+import unicodedata
 from pathlib import Path
 
 GROUND_TRUTH_FILE = Path("./ecca2089r/swp.txt")
@@ -15,6 +16,9 @@ OCR_FILES = [
 
 # Remove formatting syntax (LaTeX, Markdown) before comparison
 STRIP_FORMATTING = True
+
+# Normalize unicode characters (sub/superscript, accented latin) to ASCII
+NORMALIZE_UNICODE = True
 
 
 def strip_formatting(text: str) -> str:
@@ -40,6 +44,16 @@ def strip_formatting(text: str) -> str:
     # Markdown links: [text](url) -> text
     result = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", result)
     return result
+
+
+def normalize_unicode(text: str) -> str:
+    """Normalize unicode characters to ASCII equivalents.
+
+    Uses NFKD normalization which handles sub/superscripts, accented
+    characters, and other compatibility variants.
+    """
+    result = unicodedata.normalize("NFKD", text)
+    return result.encode("ascii", "ignore").decode("ascii")
 
 
 def levenshtein_distance(s1, s2) -> int:
@@ -83,6 +97,10 @@ def compare_texts(ground_truth: str, ocr_output: str) -> dict:
     if STRIP_FORMATTING:
         gt_normalized = strip_formatting(gt_normalized)
         ocr_normalized = strip_formatting(ocr_normalized)
+
+    if NORMALIZE_UNICODE:
+        gt_normalized = normalize_unicode(gt_normalized)
+        ocr_normalized = normalize_unicode(ocr_normalized)
 
     cer = character_error_rate(gt_normalized, ocr_normalized)
     wer = word_error_rate(gt_normalized, ocr_normalized)
