@@ -4,37 +4,46 @@
 import difflib
 import re
 import unicodedata
+import string
 from pathlib import Path
 
-GROUND_TRUTH_FILE = Path("./ecca2089r/swp.txt")
-OCR_FILES = [
-    Path("./ecca2089r/gemini-pro.txt"),
-    Path("./ecca2089r/gemini-fast.txt"),
-    Path("./ecca2089r/claude-sonnet4.5.txt"),
-    Path("./ecca2089r/gpt-5.2thinking.txt"),
-]
+from pathlib import Path
+
+DIR = './ecca2089r/'
+
+# Get ocr files in DIR
+OCR_FILES = [Path(DIR+item.name) for item in Path(DIR).iterdir() if item.is_file() and item.name.startswith("ocr-")]
+
+GROUND_TRUTH_FILE = Path(DIR+"gt.txt")
 
 # Remove formatting syntax (LaTeX, Markdown) before comparison
 STRIP_FORMATTING = True
 
+# Remove punctuation, alphanumerics only.
+STRIP_PUNCTUATION = True
+
+# Ignore casing or not?
+IGNORE_CASING = True
+
 # Normalize unicode characters (sub/superscript, accented latin) to ASCII
 NORMALIZE_UNICODE = True
-
 
 def strip_formatting(text: str) -> str:
     """Remove LaTeX and Markdown formatting syntax, keeping content."""
     result = text
-    # LaTeX math mode: $...$ or $$...$$
+    # Special case: remove strikethroughs entirely
+    result = re.sub(r"~~(.+?)~~","", result)
+    # Otherwise: deformat LaTeX math mode: $...$ or $$...$$
     result = re.sub(r"\$\$(.+?)\$\$", r"\1", result, flags=re.DOTALL)
     result = re.sub(r"\$(.+?)\$", r"\1", result)
-    # LaTeX commands: \command{arg} -> arg, \command -> ""
+    # ... and LaTeX commands: \command{arg} -> arg, \command -> ""
     result = re.sub(r"\\[a-zA-Z]+\{([^}]*)\}", r"\1", result)
     result = re.sub(r"\\[a-zA-Z]+", "", result)
-    # LaTeX braces used for grouping
+    # ... and LaTeX braces used for grouping
     result = re.sub(r"(?<!\\)[{}]", "", result)
-    # Markdown headers: # Header -> Header
+    # ... and Markdown headers: # Header -> Header
     result = re.sub(r"^#{1,6}\s+", "", result, flags=re.MULTILINE)
-    # Markdown bold/italic: **text** -> text, *text* -> text
+    # ... and Markdown bold/italic: **text** -> text, *text* -> text
     result = re.sub(r"\*\*(.+?)\*\*", r"\1", result)
     result = re.sub(r"\*(.+?)\*", r"\1", result)
     result = re.sub(r"__(.+?)__", r"\1", result)
@@ -43,9 +52,13 @@ def strip_formatting(text: str) -> str:
     result = re.sub(r"`([^`]+)`", r"\1", result)
     # Markdown links: [text](url) -> text
     result = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", result)
+
     return result
 
-
+def strip_punctuation(text: str) -> str:
+    """Remove all punctuation """
+    return re.sub(f"[{re.escape(string.punctuation)}]", " ", text)
+    
 def normalize_unicode(text: str) -> str:
     """Normalize unicode characters to ASCII equivalents.
 
@@ -101,7 +114,19 @@ def compare_texts(ground_truth: str, ocr_output: str) -> dict:
     if NORMALIZE_UNICODE:
         gt_normalized = normalize_unicode(gt_normalized)
         ocr_normalized = normalize_unicode(ocr_normalized)
-
+    
+    if STRIP_PUNCTUATION:
+        gt_normalized = strip_punctuation(gt_normalized)
+        ocr_normalized = strip_punctuation(ocr_normalized)
+    
+    if IGNORE_CASING:
+        gt_normalized = gt_normalized.upper()
+        ocr_normalized = ocr_normalized.upper()
+    
+    # minimize whitespace
+    gt_normalized = " ".join(gt_normalized.strip().split())
+    ocr_normalized = " ".join(ocr_normalized.strip().split())
+    
     cer = character_error_rate(gt_normalized, ocr_normalized)
     wer = word_error_rate(gt_normalized, ocr_normalized)
     similarity = difflib.SequenceMatcher(None, gt_normalized, ocr_normalized).ratio()
