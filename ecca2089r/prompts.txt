@@ -1,0 +1,5 @@
+# Basic prompt:
+`Do your best to transcribe this document without any additional commentary.`
+
+# Full prompt:
+`Do your best to transcribe this historical Early Modern English document without any additional commentary. For strikethroughs, mark it up as strikethrough text using GFM markdown formatting. Maintain the original document's orthography, punctuation, and spelling.`
