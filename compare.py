@@ -21,10 +21,10 @@ GROUND_TRUTH_FILE = Path(DIR+"gt.txt")
 STRIP_FORMATTING = True
 
 # Remove punctuation, alphanumerics only.
-STRIP_PUNCTUATION = True
+STRIP_PUNCTUATION = False
 
 # Ignore casing or not?
-IGNORE_CASING = True
+IGNORE_CASING = False
 
 # Normalize unicode characters (sub/superscript, accented latin) to ASCII
 NORMALIZE_UNICODE = True
