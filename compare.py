@@ -66,6 +66,8 @@ def normalize_unicode(text: str) -> str:
     Uses NFKD normalization which handles sub/superscripts, accented
     characters, and other compatibility variants.
     """
+    # manually handle yͤ since unicode normalization won't
+    result = result.replace("yͤ","ye")
     result = unicodedata.normalize("NFKD", text)
     return result.encode("ascii", "ignore").decode("ascii")
 
