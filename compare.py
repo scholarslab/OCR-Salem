@@ -10,6 +10,7 @@ from pathlib import Path
 from pathlib import Path
 
 DIR = './ecca2089r/'
+OUTFILE = open("ocr_rankings.txt","w")
 
 # Get ocr files in DIR
 OCR_FILES = [Path(DIR+item.name) for item in Path(DIR).iterdir() if item.is_file() and item.name.startswith("ocr-")]
@@ -155,12 +156,24 @@ def print_comparison(name: str, metrics: dict):
     print(f"  Ground Truth: {metrics['ground_truth_chars']} chars, {metrics['ground_truth_words']} words")
     print(f"  OCR Output:   {metrics['ocr_chars']} chars, {metrics['ocr_words']} words")
 
+    OUTFILE.write(f"\n\n{'=' * 50}")
+    OUTFILE.write(f"\n  {name}")
+    OUTFILE.write(f"\n{'=' * 50}")
+    OUTFILE.write(f"\n  Character Error Rate (CER): {metrics['character_error_rate']:.2%}")
+    OUTFILE.write(f"\n  Word Error Rate (WER):      {metrics['word_error_rate']:.2%}")
+    OUTFILE.write(f"\n  Similarity Ratio:           {metrics['similarity_ratio']:.2%}")
+    OUTFILE.write(f"\n  Character Accuracy:         {metrics['accuracy']:.2%}")
+    OUTFILE.write(f"\n  Ground Truth: {metrics['ground_truth_chars']} chars, {metrics['ground_truth_words']} words")
+    OUTFILE.write(f"\n  OCR Output:   {metrics['ocr_chars']} chars, {metrics['ocr_words']} words")
 
 def main():
     ground_truth = GROUND_TRUTH_FILE.read_text(encoding="utf-8")
 
     print(f"Ground Truth: {GROUND_TRUTH_FILE}")
     print(f"Characters: {len(ground_truth.strip())}, Words: {len(ground_truth.split())}")
+    OUTFILE.write(f"\nGround Truth: {GROUND_TRUTH_FILE}")
+    OUTFILE.write(f"\nCharacters: {len(ground_truth.strip())}, Words: {len(ground_truth.split())}")
+    
 
     results = []
     for ocr_file in OCR_FILES:
@@ -177,10 +190,13 @@ def main():
         print(f"\n{'=' * 50}")
         print("  SUMMARY (sorted by accuracy)")
         print(f"{'=' * 50}")
+        OUTFILE.write(f"\n\n{'=' * 50}")
+        OUTFILE.write("\n  SUMMARY (sorted by accuracy)")
+        OUTFILE.write(f"\n{'=' * 50}")
         results.sort(key=lambda x: x[1]["accuracy"], reverse=True)
         for name, m in results:
             print(f"  {name:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}")
-
+            OUTFILE.write(f"\n  {name:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}")
 
 if __name__ == "__main__":
     main()
