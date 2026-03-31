@@ -1,4 +1,3 @@
-
 Ground Truth: ecca2089r/gt.txt
 Characters: 1276, Words: 250
 
