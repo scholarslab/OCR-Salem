@@ -62,16 +62,6 @@ Characters: 1276, Words: 250
   OCR Output:   1258 chars, 241 words
 
 ==================================================
-  ocr-gemini3pro-full_prompt.txt
-==================================================
-  Character Error Rate (CER): 2.86%
-  Word Error Rate (WER):      11.79%
-  Similarity Ratio:           60.99%
-  Character Accuracy:         97.14%
-  Ground Truth: 1223 chars, 246 words
-  OCR Output:   1210 chars, 241 words
-
-==================================================
   ocr-gemini3thinking-full_prompt
 ==================================================
   Character Error Rate (CER): 5.48%
@@ -80,6 +70,16 @@ Characters: 1276, Words: 250
   Character Accuracy:         94.52%
   Ground Truth: 1223 chars, 246 words
   OCR Output:   1220 chars, 241 words
+
+==================================================
+  ocr-gemini3pro-full_prompt-sample02.txt
+==================================================
+  Character Error Rate (CER): 75.72%
+  Word Error Rate (WER):      93.90%
+  Similarity Ratio:           1.41%
+  Character Accuracy:         24.28%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   477 chars, 89 words
 
 ==================================================
   ocr-gpt5.4thinking-full_prompt.txt
@@ -102,7 +102,7 @@ Characters: 1276, Words: 250
   OCR Output:   1202 chars, 236 words
 
 ==================================================
-  ocr-gemini3pro-basic_prompt-sample2.txt
+  ocr-gemini3pro-full_prompt-sample01.txt
 ==================================================
   Character Error Rate (CER): 2.86%
   Word Error Rate (WER):      11.79%
@@ -110,6 +110,16 @@ Characters: 1276, Words: 250
   Character Accuracy:         97.14%
   Ground Truth: 1223 chars, 246 words
   OCR Output:   1210 chars, 241 words
+
+==================================================
+  ocr-gemini3pro-basic_prompt-sample2.txt
+==================================================
+  Character Error Rate (CER): 4.58%
+  Word Error Rate (WER):      23.58%
+  Similarity Ratio:           52.53%
+  Character Accuracy:         95.42%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1229 chars, 263 words
 
 ==================================================
   ocr-claude-sonnet4.6-basic_prompt-sample2.txt
@@ -214,9 +224,9 @@ Characters: 1276, Words: 250
 ==================================================
   SUMMARY (sorted by accuracy)
 ==================================================
-  ocr-gemini3pro-full_prompt.txt CER:  2.86%  Accuracy: 97.14%
-  ocr-gemini3pro-basic_prompt-sample2.txt CER:  2.86%  Accuracy: 97.14%
+  ocr-gemini3pro-full_prompt-sample01.txt CER:  2.86%  Accuracy: 97.14%
   ocr-gpt5.4thinking-full_prompt.txt CER:  4.01%  Accuracy: 95.99%
+  ocr-gemini3pro-basic_prompt-sample2.txt CER:  4.58%  Accuracy: 95.42%
   ocr-gemini3fast-basic_prompt.txt CER:  4.74%  Accuracy: 95.26%
   ocr-gemini3pro-basic_prompt-sample1.txt CER:  4.74%  Accuracy: 95.26%
   ocr-gpt5.4thinking-basic_prompt.txt CER:  4.82%  Accuracy: 95.18%
@@ -235,3 +245,4 @@ Characters: 1276, Words: 250
   ocr-claude-sonnet4.5-basic_prompt-sample1.txt CER: 14.96%  Accuracy: 85.04%
   ocr-claude-sonnet4.5-basic_prompt-sample2.txt CER: 15.13%  Accuracy: 84.87%
   ocr-claude-haiku4.5-basic_prompt.txt CER: 15.21%  Accuracy: 84.79%
+  ocr-gemini3pro-full_prompt-sample02.txt CER: 75.72%  Accuracy: 24.28%
