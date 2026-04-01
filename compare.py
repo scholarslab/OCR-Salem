@@ -6,8 +6,7 @@ import re
 import unicodedata
 import string
 from pathlib import Path
-
-from pathlib import Path
+import csv
 
 DIR = './ecca2089r/'
 OUTFILE = open("ocr_rankings.txt","w")
@@ -105,7 +104,7 @@ def word_error_rate(ground_truth: str, ocr_output: str) -> float:
     return distance / len(gt_words) if gt_words else 0.0
 
 
-def compare_texts(ground_truth: str, ocr_output: str) -> dict:
+def compare_texts(name:str,ground_truth: str, ocr_output: str) -> dict:
     """Compare ground truth with OCR output and return metrics."""
     gt_normalized = ground_truth.strip()
     ocr_normalized = ocr_output.strip()
@@ -135,6 +134,7 @@ def compare_texts(ground_truth: str, ocr_output: str) -> dict:
     similarity = difflib.SequenceMatcher(None, gt_normalized, ocr_normalized).ratio()
 
     return {
+        "name":name[4:-4],
         "character_error_rate": cer,
         "word_error_rate": wer,
         "similarity_ratio": similarity,
@@ -146,10 +146,10 @@ def compare_texts(ground_truth: str, ocr_output: str) -> dict:
     }
 
 
-def print_comparison(name: str, metrics: dict):
+def print_comparison(metrics: dict):
     """Print comparison metrics in a readable format."""
     print(f"\n{'=' * 50}")
-    print(f"  {name}")
+    print(f"  {metrics['name']}")
     print(f"{'=' * 50}")
     print(f"  Character Error Rate (CER): {metrics['character_error_rate']:.2%}")
     print(f"  Word Error Rate (WER):      {metrics['word_error_rate']:.2%}")
@@ -159,7 +159,7 @@ def print_comparison(name: str, metrics: dict):
     print(f"  OCR Output:   {metrics['ocr_chars']} chars, {metrics['ocr_words']} words")
 
     print(f"\n{'=' * 50}", file=OUTFILE)
-    print(f"  {name}", file=OUTFILE)
+    print(f"  {metrics["name"]}", file=OUTFILE)
     print(f"{'=' * 50}", file=OUTFILE)
     print(f"  Character Error Rate (CER): {metrics['character_error_rate']:.2%}", file=OUTFILE)
     print(f"  Word Error Rate (WER):      {metrics['word_error_rate']:.2%}", file=OUTFILE)
@@ -184,9 +184,9 @@ def main():
             continue
 
         ocr_text = ocr_file.read_text(encoding="utf-8")
-        metrics = compare_texts(ground_truth, ocr_text)
-        print_comparison(ocr_file.name, metrics)
-        results.append((ocr_file.name, metrics))
+        metrics = compare_texts(ocr_file.name,ground_truth, ocr_text)
+        print_comparison(metrics)
+        results.append(metrics)
 
     if results:
         print(f"\n{'=' * 50}")
@@ -195,10 +195,17 @@ def main():
         print(f"\n{'=' * 50}", file=OUTFILE)
         print("  SUMMARY (sorted by accuracy)", file=OUTFILE)
         print(f"{'=' * 50}", file=OUTFILE)
-        results.sort(key=lambda x: x[1]["accuracy"], reverse=True)
-        for name, m in results:
-            print(f"  {name:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}")
-            print(f"  {name:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}", file=OUTFILE)
+        results.sort(key=lambda x: x["accuracy"], reverse=True)
+        for m in results:
+            print(f"  {m["name"]:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}")
+            print(f"  {m["name"]:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}", file=OUTFILE)
 
+        with open('ocr_rankings.csv', 'w', newline='') as csvfile:
+            fieldnames = ['name','character_error_rate', 'word_error_rate', 'accuracy']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames,  extrasaction='ignore')
+
+            writer.writeheader()
+            for m in results:
+                writer.writerow(m)
 if __name__ == "__main__":
     main()
