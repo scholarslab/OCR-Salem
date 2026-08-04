@@ -20,7 +20,7 @@ GROUND_TRUTH_FILE = Path(DIR+"gt.txt")
 STRIP_FORMATTING = True
 
 # Remove punctuation, alphanumerics only.
-STRIP_PUNCTUATION = False
+STRIP_PUNCTUATION = True
 
 # Ignore casing or not?
 IGNORE_CASING = False
@@ -50,8 +50,12 @@ def strip_formatting(text: str) -> str:
     result = re.sub(r"_(.+?)_", r"\1", result)
     # Markdown inline code: `code` -> code
     result = re.sub(r"`([^`]+)`", r"\1", result)
+    # Markdown caret superscript
+    result = re.sub(r"\^", r"", result)
     # Markdown links: [text](url) -> text
     result = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", result)
+    # html tags
+    result = re.sub(r"<[^>]+>",r"", result)
 
     return result
 
@@ -159,7 +163,7 @@ def print_comparison(metrics: dict):
     print(f"  OCR Output:   {metrics['ocr_chars']} chars, {metrics['ocr_words']} words")
 
     print(f"\n{'=' * 50}", file=OUTFILE)
-    print(f"  {metrics["name"]}", file=OUTFILE)
+    print(f"  {metrics['name']}", file=OUTFILE)
     print(f"{'=' * 50}", file=OUTFILE)
     print(f"  Character Error Rate (CER): {metrics['character_error_rate']:.2%}", file=OUTFILE)
     print(f"  Word Error Rate (WER):      {metrics['word_error_rate']:.2%}", file=OUTFILE)
@@ -197,8 +201,8 @@ def main():
         print(f"{'=' * 50}", file=OUTFILE)
         results.sort(key=lambda x: x["accuracy"], reverse=True)
         for m in results:
-            print(f"  {m["name"]:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}")
-            print(f"  {m["name"]:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}", file=OUTFILE)
+            print(f"  {m['name']:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}")
+            print(f"  {m['name']:<25} CER: {m['character_error_rate']:>6.2%}  Accuracy: {m['accuracy']:>6.2%}", file=OUTFILE)
 
         with open('ocr_rankings.csv', 'w', newline='') as csvfile:
             fieldnames = ['name','character_error_rate', 'word_error_rate', 'accuracy']
