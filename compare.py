@@ -56,6 +56,8 @@ def strip_formatting(text: str) -> str:
     result = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", result)
     # html tags
     result = re.sub(r"<[^>]+>",r"", result)
+    # bracketed transcription notes
+    result = re.sub(r"\[[^\]]*\]", "", result)
 
     return result
 
