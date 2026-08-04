@@ -2,269 +2,445 @@ Ground Truth: ecca2089r/gt.txt
 Characters: 1276, Words: 250
 
 ==================================================
-  gpt5.4thinking-basic_prompt
+  gemini3thinking-basic
 ==================================================
-  Character Error Rate (CER): 7.38%
-  Word Error Rate (WER):      24.00%
-  Similarity Ratio:           15.83%
-  Character Accuracy:         92.62%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1265 chars, 251 words
+  Character Error Rate (CER): 4.99%
+  Word Error Rate (WER):      15.85%
+  Similarity Ratio:           69.53%
+  Character Accuracy:         95.01%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1219 chars, 240 words
 
 ==================================================
-  claude-sonnet4.5-basic_prompt-sample1
+  gemini3.6flash-002-extended
 ==================================================
-  Character Error Rate (CER): 17.27%
-  Word Error Rate (WER):      38.80%
-  Similarity Ratio:           6.85%
-  Character Accuracy:         82.73%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1267 chars, 251 words
+  Character Error Rate (CER): 7.69%
+  Word Error Rate (WER):      19.11%
+  Similarity Ratio:           80.08%
+  Character Accuracy:         92.31%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1167 chars, 231 words
 
 ==================================================
-  claude-sonnet4.5-basic_prompt-sample2
+  gpt5.6pro-extended
 ==================================================
-  Character Error Rate (CER): 17.97%
-  Word Error Rate (WER):      44.00%
-  Similarity Ratio:           23.39%
-  Character Accuracy:         82.03%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1248 chars, 247 words
+  Character Error Rate (CER): 1.64%
+  Word Error Rate (WER):      6.10%
+  Similarity Ratio:           96.22%
+  Character Accuracy:         98.36%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1213 chars, 241 words
 
 ==================================================
-  gemini3fast-full_prompt
+  transkribus_english_eagle_2026_08-basic
 ==================================================
-  Character Error Rate (CER): 7.54%
-  Word Error Rate (WER):      23.20%
-  Similarity Ratio:           56.19%
-  Character Accuracy:         92.46%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1278 chars, 250 words
+  Character Error Rate (CER): 8.59%
+  Word Error Rate (WER):      24.39%
+  Similarity Ratio:           63.22%
+  Character Accuracy:         91.41%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1216 chars, 242 words
 
 ==================================================
-  gemini3fast-basic_prompt
+  gemini3fast-extended
 ==================================================
-  Character Error Rate (CER): 6.75%
-  Word Error Rate (WER):      22.00%
-  Similarity Ratio:           43.73%
-  Character Accuracy:         93.25%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1278 chars, 250 words
+  Character Error Rate (CER): 5.81%
+  Word Error Rate (WER):      18.29%
+  Similarity Ratio:           68.39%
+  Character Accuracy:         94.19%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1219 chars, 241 words
 
 ==================================================
-  claude-sonnet4.6extended-full_prompt
+  gemini3.5flash_lite-extended
 ==================================================
-  Character Error Rate (CER): 11.62%
-  Word Error Rate (WER):      28.40%
-  Similarity Ratio:           44.94%
-  Character Accuracy:         88.38%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1316 chars, 249 words
+  Character Error Rate (CER): 5.15%
+  Word Error Rate (WER):      14.63%
+  Similarity Ratio:           53.55%
+  Character Accuracy:         94.85%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1212 chars, 241 words
 
 ==================================================
-  gpt5.4pro-full_prompt
+  gemini3pro-extended-001
 ==================================================
-  Character Error Rate (CER): 1.26%
-  Word Error Rate (WER):      4.80%
-  Similarity Ratio:           97.68%
-  Character Accuracy:         98.74%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1269 chars, 247 words
+  Character Error Rate (CER): 76.29%
+  Word Error Rate (WER):      94.72%
+  Similarity Ratio:           2.00%
+  Character Accuracy:         23.71%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   477 chars, 89 words
 
 ==================================================
-  gemini3thinking-full_pr
+  gemini3pro-extended-000
 ==================================================
-  Character Error Rate (CER): 7.61%
-  Word Error Rate (WER):      22.80%
-  Similarity Ratio:           51.42%
-  Character Accuracy:         92.39%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1262 chars, 249 words
+  Character Error Rate (CER): 3.27%
+  Word Error Rate (WER):      13.01%
+  Similarity Ratio:           85.77%
+  Character Accuracy:         96.73%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1209 chars, 240 words
 
 ==================================================
-  gemini3pro-full_prompt-sample02
+  qwen3.8max_fast-extended
 ==================================================
-  Character Error Rate (CER): 76.84%
-  Word Error Rate (WER):      94.80%
-  Similarity Ratio:           1.82%
-  Character Accuracy:         23.16%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   489 chars, 89 words
+  Character Error Rate (CER): 3.84%
+  Word Error Rate (WER):      13.41%
+  Similarity Ratio:           76.10%
+  Character Accuracy:         96.16%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1216 chars, 241 words
 
 ==================================================
-  gpt5.4thinking-full_prompt
+  gpt5.6high-extended
 ==================================================
-  Character Error Rate (CER): 6.44%
-  Word Error Rate (WER):      22.80%
-  Similarity Ratio:           38.26%
-  Character Accuracy:         93.56%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1256 chars, 249 words
+  Character Error Rate (CER): 1.55%
+  Word Error Rate (WER):      7.32%
+  Similarity Ratio:           95.25%
+  Character Accuracy:         98.45%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1219 chars, 242 words
 
 ==================================================
-  claude-sonnet4.6-full_prompt
+  kimi_k2.6instant_high-extended
 ==================================================
-  Character Error Rate (CER): 8.32%
-  Word Error Rate (WER):      26.00%
-  Similarity Ratio:           29.52%
-  Character Accuracy:         91.68%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1253 chars, 244 words
+  Character Error Rate (CER): 5.72%
+  Word Error Rate (WER):      15.45%
+  Similarity Ratio:           78.62%
+  Character Accuracy:         94.28%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1214 chars, 245 words
 
 ==================================================
-  gemini3pro-full_prompt-sample01
+  gemini3pro-basic-000
 ==================================================
-  Character Error Rate (CER): 5.18%
-  Word Error Rate (WER):      19.20%
-  Similarity Ratio:           38.90%
-  Character Accuracy:         94.82%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1266 chars, 248 words
+  Character Error Rate (CER): 4.09%
+  Word Error Rate (WER):      14.63%
+  Similarity Ratio:           86.76%
+  Character Accuracy:         95.91%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1202 chars, 240 words
 
 ==================================================
-  gemini3pro-basic_prompt-sample2
+  claude_opus5max-extended
 ==================================================
-  Character Error Rate (CER): 6.59%
+  Character Error Rate (CER): 3.52%
+  Word Error Rate (WER):      12.20%
+  Similarity Ratio:           90.37%
+  Character Accuracy:         96.48%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1207 chars, 239 words
+
+==================================================
+  claude_opus5high-extended
+==================================================
+  Character Error Rate (CER): 4.91%
+  Word Error Rate (WER):      17.89%
+  Similarity Ratio:           79.49%
+  Character Accuracy:         95.09%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1205 chars, 237 words
+
+==================================================
+  gemini3pro-basic-001
+==================================================
+  Character Error Rate (CER): 3.60%
+  Word Error Rate (WER):      13.01%
+  Similarity Ratio:           86.99%
+  Character Accuracy:         96.40%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1205 chars, 239 words
+
+==================================================
+  claude_sonnet4.6extended-extended-001
+==================================================
+  Character Error Rate (CER): 9.65%
+  Word Error Rate (WER):      21.54%
+  Similarity Ratio:           64.57%
+  Character Accuracy:         90.35%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1258 chars, 241 words
+
+==================================================
+  deepseekV4vision-extended
+==================================================
+  Character Error Rate (CER): 14.55%
+  Word Error Rate (WER):      29.67%
+  Similarity Ratio:           41.59%
+  Character Accuracy:         85.45%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1215 chars, 240 words
+
+==================================================
+  claude_sonnet4.6extended-extended-000
+==================================================
+  Character Error Rate (CER): 8.67%
+  Word Error Rate (WER):      22.36%
+  Similarity Ratio:           67.80%
+  Character Accuracy:         91.33%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1249 chars, 245 words
+
+==================================================
+  gpt5.4thinking-basic
+==================================================
+  Character Error Rate (CER): 5.31%
+  Word Error Rate (WER):      17.89%
+  Similarity Ratio:           51.57%
+  Character Accuracy:         94.69%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1224 chars, 242 words
+
+==================================================
+  claude_haiku4.5-basic
+==================================================
+  Character Error Rate (CER): 16.19%
+  Word Error Rate (WER):      36.18%
+  Similarity Ratio:           37.30%
+  Character Accuracy:         83.81%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1211 chars, 247 words
+
+==================================================
+  gpt5.6instant-extended
+==================================================
+  Character Error Rate (CER): 4.82%
+  Word Error Rate (WER):      16.26%
+  Similarity Ratio:           48.01%
+  Character Accuracy:         95.18%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1210 chars, 240 words
+
+==================================================
+  claude_opus5low-extended-000
+==================================================
+  Character Error Rate (CER): 4.42%
+  Word Error Rate (WER):      17.07%
+  Similarity Ratio:           83.25%
+  Character Accuracy:         95.58%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1213 chars, 239 words
+
+==================================================
+  gpt5.4pro-extended
+==================================================
+  Character Error Rate (CER): 0.74%
+  Word Error Rate (WER):      2.44%
+  Similarity Ratio:           97.91%
+  Character Accuracy:         99.26%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1220 chars, 244 words
+
+==================================================
+  gpt5.4thinking-extended
+==================================================
+  Character Error Rate (CER): 4.33%
+  Word Error Rate (WER):      15.85%
+  Similarity Ratio:           40.21%
+  Character Accuracy:         95.67%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1209 chars, 240 words
+
+==================================================
+  claude_sonnet4.6-basic-001
+==================================================
+  Character Error Rate (CER): 7.85%
+  Word Error Rate (WER):      19.51%
+  Similarity Ratio:           68.69%
+  Character Accuracy:         92.15%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1246 chars, 243 words
+
+==================================================
+  gemini3.6flash-001-extended
+==================================================
+  Character Error Rate (CER): 4.74%
+  Word Error Rate (WER):      15.04%
+  Similarity Ratio:           83.92%
+  Character Accuracy:         95.26%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1203 chars, 238 words
+
+==================================================
+  claude_sonnet4.6-basic-000
+==================================================
+  Character Error Rate (CER): 6.87%
+  Word Error Rate (WER):      18.70%
+  Similarity Ratio:           49.92%
+  Character Accuracy:         93.13%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1225 chars, 241 words
+
+==================================================
+  qwen3.8max_thinking-extended
+==================================================
+  Character Error Rate (CER): 4.17%
+  Word Error Rate (WER):      13.82%
+  Similarity Ratio:           74.52%
+  Character Accuracy:         95.83%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1214 chars, 240 words
+
+==================================================
+  gemini3fast-basic
+==================================================
+  Character Error Rate (CER): 4.99%
+  Word Error Rate (WER):      15.85%
+  Similarity Ratio:           80.52%
+  Character Accuracy:         95.01%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1221 chars, 242 words
+
+==================================================
+  claude_opus5low-extended-001
+==================================================
+  Character Error Rate (CER): 7.44%
+  Word Error Rate (WER):      17.48%
+  Similarity Ratio:           79.16%
+  Character Accuracy:         92.56%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1243 chars, 245 words
+
+==================================================
+  gemini3thinking-extended
+==================================================
+  Character Error Rate (CER): 5.81%
+  Word Error Rate (WER):      16.26%
+  Similarity Ratio:           69.34%
+  Character Accuracy:         94.19%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1220 chars, 241 words
+
+==================================================
+  claude_sonnet4.6-basic-002
+==================================================
+  Character Error Rate (CER): 6.30%
+  Word Error Rate (WER):      18.29%
+  Similarity Ratio:           69.48%
+  Character Accuracy:         93.70%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1221 chars, 239 words
+
+==================================================
+  gpt5.2thinking-basic
+==================================================
+  Character Error Rate (CER): 6.70%
+  Word Error Rate (WER):      18.70%
+  Similarity Ratio:           64.00%
+  Character Accuracy:         93.30%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1224 chars, 243 words
+
+==================================================
+  gpt5.4pro-basic
+==================================================
+  Character Error Rate (CER): 2.94%
+  Word Error Rate (WER):      8.54%
+  Similarity Ratio:           88.18%
+  Character Accuracy:         97.06%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1238 chars, 244 words
+
+==================================================
+  claude_sonnet4.6-extended
+==================================================
+  Character Error Rate (CER): 6.46%
+  Word Error Rate (WER):      19.51%
+  Similarity Ratio:           48.82%
+  Character Accuracy:         93.54%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1202 chars, 236 words
+
+==================================================
+  gemini3.6flash-000-extended
+==================================================
+  Character Error Rate (CER): 5.97%
+  Word Error Rate (WER):      20.33%
+  Similarity Ratio:           75.16%
+  Character Accuracy:         94.03%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1233 chars, 246 words
+
+==================================================
+  transkribus_english_eagle-basic-000
+==================================================
+  Character Error Rate (CER): 8.67%
   Word Error Rate (WER):      25.20%
-  Similarity Ratio:           49.12%
-  Character Accuracy:         93.41%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1287 chars, 248 words
+  Similarity Ratio:           45.88%
+  Character Accuracy:         91.33%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1231 chars, 246 words
 
 ==================================================
-  claude-sonnet4.6-basic_prompt-sample2
+  claude_sonnet4.5-basic-001
 ==================================================
-  Character Error Rate (CER): 9.97%
-  Word Error Rate (WER):      26.80%
-  Similarity Ratio:           51.09%
-  Character Accuracy:         90.03%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1302 chars, 251 words
+  Character Error Rate (CER): 15.70%
+  Word Error Rate (WER):      36.59%
+  Similarity Ratio:           48.43%
+  Character Accuracy:         84.30%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1201 chars, 240 words
 
 ==================================================
-  gemini3thinking-basic_pr
+  claude_sonnet4.5-basic-000
 ==================================================
-  Character Error Rate (CER): 8.40%
-  Word Error Rate (WER):      28.40%
-  Similarity Ratio:           52.65%
-  Character Accuracy:         91.60%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1294 chars, 248 words
+  Character Error Rate (CER): 15.29%
+  Word Error Rate (WER):      30.08%
+  Similarity Ratio:           55.37%
+  Character Accuracy:         84.71%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1226 chars, 241 words
 
 ==================================================
-  claude-sonnet4.6-basic_prompt-sample3
+  transkribus_english_eagle-basic-001
 ==================================================
-  Character Error Rate (CER): 8.16%
-  Word Error Rate (WER):      25.60%
-  Similarity Ratio:           51.67%
-  Character Accuracy:         91.84%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1273 chars, 247 words
-
-==================================================
-  gemini3pro-basic_prompt-sample1
-==================================================
-  Character Error Rate (CER): 7.06%
-  Word Error Rate (WER):      27.20%
-  Similarity Ratio:           45.79%
-  Character Accuracy:         92.94%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1277 chars, 248 words
-
-==================================================
-  claude-sonnet4.6-basic_prompt-sample1
-==================================================
-  Character Error Rate (CER): 8.79%
-  Word Error Rate (WER):      25.20%
-  Similarity Ratio:           31.77%
-  Character Accuracy:         91.21%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1282 chars, 249 words
-
-==================================================
-  gpt5.4pro-basic_prompt
-==================================================
-  Character Error Rate (CER): 3.30%
-  Word Error Rate (WER):      10.80%
-  Similarity Ratio:           86.34%
-  Character Accuracy:         96.70%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1288 chars, 250 words
-
-==================================================
-  gpt5.2thinking-basic_prompt
-==================================================
-  Character Error Rate (CER): 8.40%
-  Word Error Rate (WER):      25.20%
-  Similarity Ratio:           52.62%
-  Character Accuracy:         91.60%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1265 chars, 251 words
-
-==================================================
-  claude-haiku4.5-basic_prompt
-==================================================
-  Character Error Rate (CER): 18.60%
-  Word Error Rate (WER):      44.40%
-  Similarity Ratio:           24.75%
-  Character Accuracy:         81.40%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1255 chars, 246 words
-
-==================================================
-  transkribus-sample2
-==================================================
-  Character Error Rate (CER): 12.24%
-  Word Error Rate (WER):      37.20%
-  Similarity Ratio:           14.52%
-  Character Accuracy:         87.76%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1260 chars, 250 words
-
-==================================================
-  claude-sonnet4.6extended-basic_prompt-sample1
-==================================================
-  Character Error Rate (CER): 10.75%
-  Word Error Rate (WER):      28.80%
-  Similarity Ratio:           32.82%
-  Character Accuracy:         89.25%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1310 chars, 253 words
-
-==================================================
-  transkribus-sample1
-==================================================
-  Character Error Rate (CER): 11.38%
-  Word Error Rate (WER):      32.40%
-  Similarity Ratio:           22.84%
-  Character Accuracy:         88.62%
-  Ground Truth: 1274 chars, 250 words
-  OCR Output:   1283 chars, 251 words
+  Character Error Rate (CER): 9.32%
+  Word Error Rate (WER):      27.64%
+  Similarity Ratio:           63.67%
+  Character Accuracy:         90.68%
+  Ground Truth: 1223 chars, 246 words
+  OCR Output:   1221 chars, 244 words
 
 ==================================================
   SUMMARY (sorted by accuracy)
 ==================================================
-  gpt5.4pro-full_prompt     CER:  1.26%  Accuracy: 98.74%
-  gpt5.4pro-basic_prompt    CER:  3.30%  Accuracy: 96.70%
-  gemini3pro-full_prompt-sample01 CER:  5.18%  Accuracy: 94.82%
-  gpt5.4thinking-full_prompt CER:  6.44%  Accuracy: 93.56%
-  gemini3pro-basic_prompt-sample2 CER:  6.59%  Accuracy: 93.41%
-  gemini3fast-basic_prompt  CER:  6.75%  Accuracy: 93.25%
-  gemini3pro-basic_prompt-sample1 CER:  7.06%  Accuracy: 92.94%
-  gpt5.4thinking-basic_prompt CER:  7.38%  Accuracy: 92.62%
-  gemini3fast-full_prompt   CER:  7.54%  Accuracy: 92.46%
-  gemini3thinking-full_pr   CER:  7.61%  Accuracy: 92.39%
-  claude-sonnet4.6-basic_prompt-sample3 CER:  8.16%  Accuracy: 91.84%
-  claude-sonnet4.6-full_prompt CER:  8.32%  Accuracy: 91.68%
-  gemini3thinking-basic_pr  CER:  8.40%  Accuracy: 91.60%
-  gpt5.2thinking-basic_prompt CER:  8.40%  Accuracy: 91.60%
-  claude-sonnet4.6-basic_prompt-sample1 CER:  8.79%  Accuracy: 91.21%
-  claude-sonnet4.6-basic_prompt-sample2 CER:  9.97%  Accuracy: 90.03%
-  claude-sonnet4.6extended-basic_prompt-sample1 CER: 10.75%  Accuracy: 89.25%
-  transkribus-sample1       CER: 11.38%  Accuracy: 88.62%
-  claude-sonnet4.6extended-full_prompt CER: 11.62%  Accuracy: 88.38%
-  transkribus-sample2       CER: 12.24%  Accuracy: 87.76%
-  claude-sonnet4.5-basic_prompt-sample1 CER: 17.27%  Accuracy: 82.73%
-  claude-sonnet4.5-basic_prompt-sample2 CER: 17.97%  Accuracy: 82.03%
-  claude-haiku4.5-basic_prompt CER: 18.60%  Accuracy: 81.40%
-  gemini3pro-full_prompt-sample02 CER: 76.84%  Accuracy: 23.16%
+  gpt5.4pro-extended        CER:  0.74%  Accuracy: 99.26%
+  gpt5.6high-extended       CER:  1.55%  Accuracy: 98.45%
+  gpt5.6pro-extended        CER:  1.64%  Accuracy: 98.36%
+  gpt5.4pro-basic           CER:  2.94%  Accuracy: 97.06%
+  gemini3pro-extended-000   CER:  3.27%  Accuracy: 96.73%
+  claude_opus5max-extended  CER:  3.52%  Accuracy: 96.48%
+  gemini3pro-basic-001      CER:  3.60%  Accuracy: 96.40%
+  qwen3.8max_fast-extended  CER:  3.84%  Accuracy: 96.16%
+  gemini3pro-basic-000      CER:  4.09%  Accuracy: 95.91%
+  qwen3.8max_thinking-extended CER:  4.17%  Accuracy: 95.83%
+  gpt5.4thinking-extended   CER:  4.33%  Accuracy: 95.67%
+  claude_opus5low-extended-000 CER:  4.42%  Accuracy: 95.58%
+  gemini3.6flash-001-extended CER:  4.74%  Accuracy: 95.26%
+  gpt5.6instant-extended    CER:  4.82%  Accuracy: 95.18%
+  claude_opus5high-extended CER:  4.91%  Accuracy: 95.09%
+  gemini3thinking-basic     CER:  4.99%  Accuracy: 95.01%
+  gemini3fast-basic         CER:  4.99%  Accuracy: 95.01%
+  gemini3.5flash_lite-extended CER:  5.15%  Accuracy: 94.85%
+  gpt5.4thinking-basic      CER:  5.31%  Accuracy: 94.69%
+  kimi_k2.6instant_high-extended CER:  5.72%  Accuracy: 94.28%
+  gemini3fast-extended      CER:  5.81%  Accuracy: 94.19%
+  gemini3thinking-extended  CER:  5.81%  Accuracy: 94.19%
+  gemini3.6flash-000-extended CER:  5.97%  Accuracy: 94.03%
+  claude_sonnet4.6-basic-002 CER:  6.30%  Accuracy: 93.70%
+  claude_sonnet4.6-extended CER:  6.46%  Accuracy: 93.54%
+  gpt5.2thinking-basic      CER:  6.70%  Accuracy: 93.30%
+  claude_sonnet4.6-basic-000 CER:  6.87%  Accuracy: 93.13%
+  claude_opus5low-extended-001 CER:  7.44%  Accuracy: 92.56%
+  gemini3.6flash-002-extended CER:  7.69%  Accuracy: 92.31%
+  claude_sonnet4.6-basic-001 CER:  7.85%  Accuracy: 92.15%
+  transkribus_english_eagle_2026_08-basic CER:  8.59%  Accuracy: 91.41%
+  claude_sonnet4.6extended-extended-000 CER:  8.67%  Accuracy: 91.33%
+  transkribus_english_eagle-basic-000 CER:  8.67%  Accuracy: 91.33%
+  transkribus_english_eagle-basic-001 CER:  9.32%  Accuracy: 90.68%
+  claude_sonnet4.6extended-extended-001 CER:  9.65%  Accuracy: 90.35%
+  deepseekV4vision-extended CER: 14.55%  Accuracy: 85.45%
+  claude_sonnet4.5-basic-000 CER: 15.29%  Accuracy: 84.71%
+  claude_sonnet4.5-basic-001 CER: 15.70%  Accuracy: 84.30%
+  claude_haiku4.5-basic     CER: 16.19%  Accuracy: 83.81%
+  gemini3pro-extended-001   CER: 76.29%  Accuracy: 23.71%
